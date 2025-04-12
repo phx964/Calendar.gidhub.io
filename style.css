@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(https://media.tenor.com/r_J0EKlGTzkAAAAM/friend-war-thunder.gif);
+	color:black;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.container{
+	background: white;
+	padding: 20px;
+	border-radius: 15px;
+	width: 600px;
+}
+header{
+	margin-bottom: 30px;
+}
+.title{
+	color: #000000;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.subtitle{
+	font-size: 15px;
+	color: #000000;
+}
+.calendar{
+	background-color: #ffffff;
+	padding: 15px;
+	border-radius: 15px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 1.0);
+}
+.days-of-week{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
+	margin-bottom: 10px;
+}
+.day{
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: #000000;
+}
+.days{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
+}
+.day-number{
+	font-size: 1.2rem;
+	padding: 20px;
+	background-color: #B0C4DE;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.day-number:hover{
+	background-color: #87CEEB;
+	transform: scale(1.2);
+}
+.day-number:active{
+	background-color: #00CED1;
+	color: #FFFFFF;
+}
+.day-number:nth-child(3){
+	background-color: #87CEEB;
+	font-family: bold;
+}
+.tooltip{
+	display: none;
+	position: absolute;
+	background-color: #87CEEB;
+	color:  #000000;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transform: translateY(+680%);
+	z-index: 10;
+}
+.day-number:hover +.tooltip{
+	display: block;
+}
